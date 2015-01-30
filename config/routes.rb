@@ -21,12 +21,12 @@ Rails.application.routes.draw do
   get("/actors", { :controller => "actors", :action => "index" })
   get("/actors/:id", { :controller => "actors", :action => "show" })
 
-
-  # Routes for the Director resource:
   # Route to DELETE actors
   get("/delete_actor/:id", { :controller => "actors", :action => "destroy" })
 
-    # Routes to CREATE directors
+
+  # Routes for the Director resource:
+  # Routes to CREATE directors
   get("/directors/new", { :controller => "directors", :action => "new_form" })
   get("/add_director", { :controller => "directors", :action => "create_row" })
 
