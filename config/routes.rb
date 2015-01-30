@@ -1,41 +1,40 @@
 Rails.application.routes.draw do
   # Routes for the Movie resource:
-  # Routes to CREATE movies
+  # CREATE
   get("/movies/new", { :controller => "movies", :action => "new_form" })
   get("/add_movie", { :controller => "movies", :action => "create_row" })
 
-  # Routes to READ movies
+  # READ
   get("/movies", { :controller => "movies", :action => "index" })
   get("/movies/:id", { :controller => "movies", :action => "show" })
 
-
-  # Route to DELETE movies
+  # DELETE
   get("/delete_movie/:id", { :controller => "movies", :action => "destroy" })
+  #------------------------------
 
   # Routes for the Actor resource:
-  # Routes to CREATE actors
+  # CREAT
   get("/actors/new", { :controller => "actors", :action => "new_form" })
   get("/add_actor", { :controller => "actors", :action => "create_row" })
 
-  # Routes to READ actors
+  # READ
   get("/actors", { :controller => "actors", :action => "index" })
   get("/actors/:id", { :controller => "actors", :action => "show" })
 
-  # Route to DELETE actors
+  # DELETE
   get("/delete_actor/:id", { :controller => "actors", :action => "destroy" })
-
+  #------------------------------
 
   # Routes for the Director resource:
-  # Routes to CREATE directors
+  # CREATE
   get("/directors/new", { :controller => "directors", :action => "new_form" })
   get("/add_director", { :controller => "directors", :action => "create_row" })
 
-  # Routes to READ directors
+  # READ
   get("/directors", { :controller => "directors", :action => "index" })
   get("/directors/:id", { :controller => "directors", :action => "show" })
 
-
-  # Route to DELETE directors
+  # DELETE
   get("/delete_director/:id", { :controller => "directors", :action => "destroy" })
-
+  #------------------------------
 end
