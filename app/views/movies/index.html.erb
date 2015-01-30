@@ -1,7 +1,15 @@
-<h1>List of Movies</h1>
+<h1>List of Movies (<%= @movies.count %>)</h1>
 
 <ul>
   <% @movies.each do |movie| %>
-  <li><%= movie.title %> (<%= movie.year %>)</li>
+  <li>
+    <a href="http://localhost:3000/movies/<%= movie.id %>"><%= movie.title %></a>
+    (<%= movie.year %>)
+    <a href="http://localhost:3000/delete_movie/<%= movie.id %>">Delete this movie</a>
+  </li>
   <% end %>
 </ul>
+
+<!-- Make each movie title a link to its show page -->
+
+<!-- Add a functional "Delete" link next to each movie -->
